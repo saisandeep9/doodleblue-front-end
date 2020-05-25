@@ -63,17 +63,12 @@ class Task extends Component {
                     <>
                       <button
                         onClick={() => this.onDelete(task)}
-                        className="btn btn-danger m-2"
+                        className="btn  m-2"
                       >
-                        x
+                        <i class="fa fa-trash"></i>
                       </button>
                       <Link to={{ pathname: `/update/${task._id}` }}>
-                        <button
-                          // onClick={() => this.onDelete(task)}
-                          className="btn btn-danger m-2"
-                        >
-                          Update
-                        </button>
+                        <button className="btn btn-success m-2">Update</button>
                       </Link>
                     </>
                   )}
