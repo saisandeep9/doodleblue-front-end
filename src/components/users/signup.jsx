@@ -39,8 +39,8 @@ class Signup extends Validation {
     return (
       <div>
         <div className="row m-5 ">
-          <div className="col-8 text-center box " style={{ width: "auto" }}>
-            <h2 className="">welcome E-commerce website</h2>
+          <div className="col-8 text-center " style={{ width: "auto" }}>
+            <h2 className="">welcome doodleblue website</h2>
           </div>
 
           <div className="col-4">

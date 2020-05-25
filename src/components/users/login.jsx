@@ -37,7 +37,7 @@ class Login extends Validation {
       <div>
         <div className="row m-5">
           <div className="col-8 text-center">
-            <h2 className="">welcome E-commerce website</h2>
+            <h2 className="">welcome doodleblue website</h2>
           </div>
 
           <div className="col-4">
