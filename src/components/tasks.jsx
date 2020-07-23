@@ -31,6 +31,11 @@ class Task extends Component {
       this.setState({ tasks: actualTasks });
     }
   };
+  // entryTime = (task) => {
+  //   let t = task.entryTime;
+  //   t.toLocaleTimeString();
+  //   console.log(t);
+  // };
 
   render() {
     console.log("get ", this.state.tasks);
@@ -55,8 +60,34 @@ class Task extends Component {
               <tr key={task._id}>
                 <td>{task.taskName}</td>
                 <td>{task.userName}</td>
-                <td>{task.entryTime}</td>
-                <td>{task.editTime}</td>
+
+                <td>
+                  {
+                    <>
+                      <span>
+                        {new Date(task.entryTime).toLocaleDateString()}{" "}
+                      </span>
+                      <span>
+                        {" "}
+                        {new Date(task.entryTime).toLocaleTimeString()}
+                      </span>
+                    </>
+                  }
+                </td>
+
+                <td>
+                  {
+                    <>
+                      <span>
+                        {new Date(task.editTime).toLocaleDateString()}{" "}
+                      </span>
+                      <span>
+                        {" "}
+                        {new Date(task.editTime).toLocaleTimeString()}
+                      </span>
+                    </>
+                  }
+                </td>
                 <td>{task.expiry}</td>
                 <td>
                   {user.user.name === task.userName && (
@@ -65,7 +96,7 @@ class Task extends Component {
                         onClick={() => this.onDelete(task)}
                         className="btn  m-2"
                       >
-                        <i class="fa fa-trash"></i>
+                        <i className="fa fa-trash"></i>
                       </button>
                       <Link to={{ pathname: `/update/${task._id}` }}>
                         <button className="btn btn-success m-2">Update</button>

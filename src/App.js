@@ -11,6 +11,7 @@ import Task from "./components/tasks";
 import UpdateTask from "./components/updateTask";
 import CreateTask from "./components/createTask";
 import "react-toastify/dist/ReactToastify.css";
+import Time from "./components/time";
 
 class App extends Component {
   state = { user: {} };
@@ -25,7 +26,7 @@ class App extends Component {
       <div>
         <ToastContainer />
         <NavBar user={this.state.user} />
-
+        <Time />
         <Switch>
           {this.state.user && (
             <>
